@@ -7,11 +7,11 @@ const FoodCollection = require('./models/food-collection');
 const food = new FoodCollection();
 
 // const MONGOOSE_URI = 'mongodb://localhost:27017/food';
-const options = {useNewUrlParser: true, useUnifiedTopology: true}
+const options = { useNewUrlParser: true, useUnifiedTopology: true }
 
 mongoose.connect(process.env.MONGOOSE_URI, options);
 
-const doDataStuff = async() => {
+const doDataStuff = async () => {
   let carrot = {
     name: 'Carrot',
     calories: 25,
@@ -30,7 +30,7 @@ const doDataStuff = async() => {
   let allFood = await food.get();
   console.log('All Food', allFood);
 
-  // discounnect from Mongo
+  // disconnect from Mongo
   mongoose.disconnect();
 }
 
