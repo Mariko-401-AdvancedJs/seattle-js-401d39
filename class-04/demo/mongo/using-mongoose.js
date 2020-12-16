@@ -18,12 +18,8 @@ const options = { useNewUrlParser: true, useUnifiedTopology: true }
 // connect to mongoose
 mongoose.connect(process.env.MONGOOSE_URI, options);
 
-<<<<<<< HEAD
-const doDataStuff = async () => {
-=======
 // create an async function
-const doDataStuff = async() => {
->>>>>>> f053a2f025a4c8a70c70f1ab5324022265ea7a6c
+const doDataStuff = async () => {
   let carrot = {
     name: 'Carrot',
     calories: 25,
